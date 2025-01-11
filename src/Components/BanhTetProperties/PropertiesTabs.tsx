@@ -20,10 +20,12 @@ export const TabsContent = () => {
             </div>
             <div className="w-1/2 p-4">
                 <div>
-                    <label className="text-2xl flex gap-4">
+                    <div className="text-2xl flex gap-4">
                         Bánh tét mặn nhỏ (thịt mỡ đậu xanh)
-
-                    </label>
+                    </div>
+                    <div className="text-xl flex gap-4">
+                        70.000 VNĐ - Khoảng 700g
+                    </div>
                     <input
                         className="rounded-lg"
                         type="number"
@@ -38,9 +40,12 @@ export const TabsContent = () => {
                     />
                 </div>
                 <div>
-                    <label className="text-2xl flex gap-4">
+                    <div className="text-2xl flex gap-4">
                         Bánh tét mặn (thịt mỡ đậu xanh)
-                    </label>
+                    </div>
+                    <div className="text-xl flex gap-4">
+                        100.000 VNĐ - Khoảng 1.1 kg
+                    </div>
                     <input
                         className="rounded-lg"
                         type="number"
@@ -55,9 +60,12 @@ export const TabsContent = () => {
                     />
                 </div>
                 <div>
-                    <label className="text-2xl flex gap-4">
+                    <div className="text-2xl flex gap-4">
                         Bánh tét mặn đặc biệt (thịt mỡ lạp xưởng đậu xanh 5 trứng muối)
-                    </label>
+                    </div>
+                    <div className="text-xl flex gap-4">
+                        150.000 VNĐ - Khoảng 1.2 kg
+                    </div>
                     <input
                         className="rounded-lg"
                         type="number"
@@ -89,9 +97,12 @@ export const TabsContent = () => {
                     />
                 </div>
                 <div>
-                    <label className="text-2xl flex gap-4">
+                    <div className="text-2xl flex gap-4">
                         Bánh tét chuối (chay, nếp có trộn đậu đen)
-                    </label>
+                    </div>
+                    <div className="text-xl">
+                        70.000 VNĐ - Khoảng 700g
+                    </div>
                     <input
                         className="rounded-lg"
                         type="number"
@@ -106,9 +117,12 @@ export const TabsContent = () => {
                     />
                 </div>
                 <div>
-                    <label className="text-2xl flex gap-4">
+                    <div className="text-2xl flex gap-4">
                         Bánh tét chay (nếp và đậu xanh)
-                    </label>
+                    </div>
+                    <div className="text-xl">
+                        60.000 VNĐ - Khoảng 700g
+                    </div>
                     <input
                         className="rounded-lg"
                         type="number"
