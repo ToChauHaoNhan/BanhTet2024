@@ -9,6 +9,7 @@ export const TabsContent = () => {
         banh_tet_chuoi: 0,
         banh_tet_chay: 0
     })
+    console.log("propertiesForm: ", propertiesForm)
     return (
         <div className="flex">
             <div className="w-1/2 p-4 justify-center">
@@ -24,12 +25,14 @@ export const TabsContent = () => {
 
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                banh_tet_man_nho: e.target.value,
+                                banh_tet_man_nho: Number(e.target.value),
                             });
                         }}
                     />
@@ -39,12 +42,14 @@ export const TabsContent = () => {
                         Bánh tét mặn (thịt mỡ đậu xanh)
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                banh_tet_man: e.target.value,
+                                banh_tet_man: Number(e.target.value),
                             });
                         }}
                     />
@@ -54,12 +59,14 @@ export const TabsContent = () => {
                         Bánh tét mặn đặc biệt (thịt mỡ lạp xưởng đậu xanh 5 trứng muối)
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                banh_tet_man_dac_biet: e.target.value,
+                                banh_tet_man_dac_biet: Number(e.target.value),
                             });
                         }}
                     />
@@ -69,12 +76,14 @@ export const TabsContent = () => {
                         Trứng muối thêm
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                trung_muoi_them: e.target.value,
+                                trung_muoi_them: Number(e.target.value),
                             });
                         }}
                     />
@@ -84,12 +93,14 @@ export const TabsContent = () => {
                         Bánh tét chuối (chay, nếp có trộn đậu đen)
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                banh_tet_chuoi: e.target.value,
+                                banh_tet_chuoi: Number(e.target.value),
                             });
                         }}
                     />
@@ -99,12 +110,14 @@ export const TabsContent = () => {
                         Bánh tét chay (nếp và đậu xanh)
                     </label>
                     <input
-                        className="bg-[#b4bea3] rounded-lg"
+                        className="rounded-lg"
                         type="number"
+                        min={0}
+                        max={20}
                         onChange={(e) => {
                             setPropertiesForm({
                                 ...propertiesForm,
-                                banh_tet_chay: e.target.value,
+                                banh_tet_chay: Number(e.target.value),
                             });
                         }}
                     />
