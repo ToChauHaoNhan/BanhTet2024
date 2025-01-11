@@ -11,23 +11,26 @@ export const TabsContent = () => {
     })
     console.log("propertiesForm: ", propertiesForm)
     return (
-        <div className="flex">
-            <div className="w-1/2 p-4 justify-center">
+        <div className="flex lg:flex-wrap p-4">
+            <div className="w-1/2 justify-items-center justify-center content-center">
                 <img
-                    className="banhtet-image-properties w-[100%] h-[100%]"
-                    src="https://i.ytimg.com/vi/et3w1WeSbYU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDXd-9NdbJkR0kZTb7GUK1IRDRxbA"
+                    className="banhtet-image-properties w-[75%] h-[75%] rounded-lg"
+                    src="src/asset/pot.png"
                 />
+                <button className="bg-[#0e540a] text-white p-4 px-16 rounded-r-3xl rounded-l-3xl m-8 transition hover:scale-105 shadow-2xl shadow-orange-950">
+                    Chốt đơn
+                </button>
             </div>
-            <div className="w-1/2 p-4">
-                <div>
+            <div className="w-1/2 p-4 items-center content-center">
+                <div className="py-1">
                     <div className="text-2xl flex gap-4">
                         Bánh tét mặn nhỏ (thịt mỡ đậu xanh)
                     </div>
-                    <div className="text-xl flex gap-4">
+                    <div className="text-lg text-slate-700 flex gap-4">
                         70.000 VNĐ - Khoảng 700g
                     </div>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -39,15 +42,15 @@ export const TabsContent = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="py-1">
                     <div className="text-2xl flex gap-4">
                         Bánh tét mặn (thịt mỡ đậu xanh)
                     </div>
-                    <div className="text-xl flex gap-4">
+                    <div className="text-lg text-slate-700 flex gap-4">
                         100.000 VNĐ - Khoảng 1.1 kg
                     </div>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -59,15 +62,15 @@ export const TabsContent = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="py-1">
                     <div className="text-2xl flex gap-4">
                         Bánh tét mặn đặc biệt (thịt mỡ lạp xưởng đậu xanh 5 trứng muối)
                     </div>
-                    <div className="text-xl flex gap-4">
+                    <div className="text-lg text-slate-700 flex gap-4">
                         150.000 VNĐ - Khoảng 1.2 kg
                     </div>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -79,12 +82,12 @@ export const TabsContent = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="py-1">
                     <label className="text-2xl flex gap-4">
                         Trứng muối thêm
                     </label>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -96,15 +99,15 @@ export const TabsContent = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="py-1">
                     <div className="text-2xl flex gap-4">
                         Bánh tét chuối (chay, nếp có trộn đậu đen)
                     </div>
-                    <div className="text-xl">
+                    <div className="text-lg text-slate-700">
                         70.000 VNĐ - Khoảng 700g
                     </div>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -116,15 +119,15 @@ export const TabsContent = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="py-1">
                     <div className="text-2xl flex gap-4">
                         Bánh tét chay (nếp và đậu xanh)
                     </div>
-                    <div className="text-xl">
+                    <div className="text-lg text-slate-700">
                         60.000 VNĐ - Khoảng 700g
                     </div>
                     <input
-                        className="rounded-lg"
+                        className="rounded-lg w-[15%] p-1"
                         type="number"
                         min={0}
                         max={20}
@@ -144,7 +147,7 @@ export const TabsContent = () => {
 const tabsData = [
     {
         label:
-            <div className="bg-[#e45814] p-8 rounded-t-full">
+            <div className="bg-[#e45814] p-4 rounded-t-full">
                 Nấu ngày 15.01.2025
                 <br />
                 <br />
@@ -155,7 +158,7 @@ const tabsData = [
     },
     {
         label:
-            <div className="bg-[#f3963a] p-8 rounded-t-full">
+            <div className="bg-[#f3963a] p-4 rounded-t-full">
                 Nấu ngày 18.01.2025
                 <br />
                 <br />
@@ -166,10 +169,9 @@ const tabsData = [
     },
     {
         label:
-            <div className="bg-[#ecba84] p-8 rounded-t-full">
+            <div className="bg-[#ecba84] p-4 rounded-t-full">
                 Nấu ngày 22.01.2025
-                <br />
-                (23 Âm)
+                <div className="text-red-500">(23 Âm)</div>
             </div>,
         content: <TabsContent />,
         bg_color: "#ecba84",
@@ -177,10 +179,9 @@ const tabsData = [
     },
     {
         label:
-            <div className="bg-[#f2f5d4] p-8 rounded-t-full">
+            <div className="bg-[#f2f5d4] p-4 rounded-t-full">
                 Nấu ngày 25.01.2025
-                <br />
-                (26 Âm)
+                <div className="text-red-500">(26 Âm)</div>
             </div>,
         content: <TabsContent />,
         bg_color: "#f2f5d4",
@@ -197,7 +198,7 @@ export const PropertiesTabs = () => {
                     return (
                         <div
                             key={idx}
-                            className={`transition-color duration-300 rounded-t-full w-[25%] text-center
+                            className={`transition-color duration-300 rounded-t-full w-[25%] text-center justify-self-center font-bold
                                 ${idx === activeTabIndex
                                     ? `bg-[${tabsData[activeTabIndex].bg_color}]`
                                     : ""
@@ -209,9 +210,9 @@ export const PropertiesTabs = () => {
                     );
                 })}
             </div>
-            <div className={`bg-[${tabsData[activeTabIndex].bg_color}]`}>
+            <div className={`bg-[${tabsData[activeTabIndex].bg_color}] px-4 rounded-b-3xl`}>
                 <div>{tabsData[activeTabIndex].content}</div>
-                <div>{tabsData[activeTabIndex].order_note}</div>
+                <div className="text-center text-2xl py-4">{tabsData[activeTabIndex].order_note}</div>
             </div>
         </div>
     );
