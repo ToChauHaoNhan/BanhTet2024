@@ -135,8 +135,7 @@ const tabsData = [
                 <br />
                 <br />
             </div>,
-        content:
-            <TabsContent />,
+        content: <TabsContent />,
         bg_color: "#e45814",
         order_note: "Giao ngày 16-19/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao."
     },
@@ -147,10 +146,7 @@ const tabsData = [
                 <br />
                 <br />
             </div>,
-        content:
-            <div>
-                2
-            </div>,
+        content: <TabsContent />,
         bg_color: "#f3963a",
         order_note: "Giao ngày 19-21/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao."
     },
@@ -161,10 +157,7 @@ const tabsData = [
                 <br />
                 (23 Âm)
             </div>,
-        content:
-            <div>
-                3
-            </div>,
+        content: <TabsContent />,
         bg_color: "#ecba84",
         order_note: "LƯU Ý: Giao ngày 23-25 (24 âm - 26 âm), giao Grab/ Aha/ Loship/ Be trong ngày hoặc khách tự đặt giao."
     },
@@ -175,10 +168,7 @@ const tabsData = [
                 <br />
                 (26 Âm)
             </div>,
-        content:
-            <div>
-                4
-            </div>,
+        content: <TabsContent />,
         bg_color: "#f2f5d4",
         order_note: "Giao ngày 23-25 (27 âm - 28 âm), khúc này để sốp tự chạy đi ship. Mua cúng ha dân Sài Gòn ơi!"
     },
