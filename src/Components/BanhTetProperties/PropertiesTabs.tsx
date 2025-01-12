@@ -95,6 +95,7 @@ export const TabsContent = ({
               },
             });
             setShow(!show);
+            checkPot(day[active_day]);
           }}
         >
           Chốt đơn
