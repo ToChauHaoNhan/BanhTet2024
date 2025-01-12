@@ -49,7 +49,7 @@ export const Luan_500k_page4 = ({
   finalForm: object;
   setFinalForm: React.Dispatch<React.SetStateAction<object>>;
 }) => {
-  const [forward, setForward] = React.useState(false);
+  const [forward, setForward] = React.useState(true);
   
   if(forward){
     addData(finalForm)
