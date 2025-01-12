@@ -16,7 +16,7 @@ export const FinalPage = () => {
             <Landing />
             <NguyenLieu />
             <HuongDan />
-            <BanhTetProperties finalForm = {finalForm} setFinalForm = {setFinalForm}/>
+            <BanhTetProperties finalForm = {finalForm} setFinalForm = {setFinalForm}/> 
         </div>
     )
 }
