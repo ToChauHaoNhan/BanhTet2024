@@ -3,7 +3,6 @@ import { Luan_500k_page2 } from "./Luan_500k_page2";
 import { Luan_500k_page3 } from "./Luan_500k_page3";
 
 async function addData(data: object) {
-  console.log(data)
   // const payload = {
   //     banh_tet_man_nho: data.form_BK.banh_tet_man_nho || 0,
   //     banh_tet_man: data.form_BK.banh_tet_man || 0,
@@ -53,7 +52,8 @@ export const Luan_500k_page4 = ({
   const [forward, setForward] = React.useState(false);
   
   if(forward){
-    addData(finalForm)
+    // addData(finalForm)
+    console.log(finalForm)
   }
   return (
     <div>

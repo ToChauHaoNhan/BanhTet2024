@@ -59,6 +59,13 @@ export const TabsContent = ({
               },
             });
             setShow(!show);
+            // console.log({
+            //   ...finalForm,
+            //   form_BK: {
+            //     ...propertiesForm,
+            //     ngaychon: day[active_day],
+            //   },
+            // })
           }}
         >
           Chốt đơn
