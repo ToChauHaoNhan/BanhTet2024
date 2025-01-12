@@ -7,9 +7,11 @@ import { useNavigate } from "react-router";
 export const Luan_500k_page1 = ({
   finalForm,
   setFinalForm,
+  setShow
 }: {
   finalForm: object;
   setFinalForm: React.Dispatch<React.SetStateAction<object>>;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>
 }) => {
   const [form, setForm] = React.useState({
     ten: "",
@@ -18,10 +20,10 @@ export const Luan_500k_page1 = ({
   });
   const navigate = useNavigate();
   return (
-    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center z-50">
+    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center z-50 fixed inset-0 bg-black">
       <div className="bg-[#e45814] h-[80%] w-[80%] p-16 grid grid-cols-1 xl:grid-cols-2">
         <div className="flex items-center justify-center">
-          <img className="max-h-[500px]" src={Image} />
+          <img className="max-h-[400px]" src={Image} />
         </div>
         <div className="w-full h-full flex items-center mt-8 xl:mt-0">
           <form
@@ -32,8 +34,8 @@ export const Luan_500k_page1 = ({
                 ...finalForm,
                 form,
               });
-              console.log(form);
               navigate("/final")
+              setShow(false)
             }}
           >
             <div>

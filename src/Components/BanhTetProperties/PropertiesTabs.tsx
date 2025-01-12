@@ -58,11 +58,6 @@ export const TabsContent = ({
                 ngaychon: day[active_day],
               },
             });
-            console.log({
-              ...propertiesForm,
-              ngaychon: day[active_day],
-            });
-            console.log(finalForm);
             setShow(!show);
           }}
         >
@@ -260,6 +255,7 @@ export const PropertiesTabs = ({
             <Luan_500k_page1
               finalForm={finalForm}
               setFinalForm={setFinalForm}
+              setShow = {setShow}
             />
           </motion.div>
         ) : null}
