@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../asset/placeholder.jpg";
+import Image from "../asset/order-popup.png";
 // import {ReactComponent as Lock} from "../asset/lock.svg"
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router";
@@ -18,7 +18,7 @@ export const Luan_500k_page1 = ({
   });
   const navigate = useNavigate();
   return (
-    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center ">
+    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center z-50">
       <div className="bg-[#e45814] h-[80%] w-[80%] p-16 grid grid-cols-1 xl:grid-cols-2">
         <div className="flex items-center justify-center">
           <img className="max-h-[500px]" src={Image} />

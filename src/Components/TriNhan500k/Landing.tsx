@@ -17,7 +17,7 @@ export const TriNhan500k = () => {
                 <div className="text-center">
                     <span className="text-3xl font-semibold underline mb-20 block">HH</span>
                     <h1 className="text-7xl font-bold mb-20">GOM NỒI BÁNH TÉT</h1>
-                    <p className="mb-6 text-xl mb-10">Bán gần chục năm rồi mới có web</p>
+                    <p className="text-xl mb-10">Bán gần chục năm rồi mới có web</p>
                     <button className="bg-[#FF6A00] text-white text-bold py-3 px-6 rounded-full text-lg">
                         Mua sớm đi, đắt hàng lắm á!
                     </button>
