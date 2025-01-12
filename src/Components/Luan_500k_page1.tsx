@@ -33,7 +33,7 @@ export const Luan_500k_page1 = ({
                 form,
               });
               console.log(form);
-              navigate("/2")
+              navigate("/final")
             }}
           >
             <div>
