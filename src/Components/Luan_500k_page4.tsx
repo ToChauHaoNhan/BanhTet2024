@@ -53,8 +53,7 @@ export const Luan_500k_page4 = ({
   const [forward, setForward] = React.useState(false);
   
   if(forward){
-    console.log(finalForm)
-    // tu them code add data
+    addData(finalForm)
   }
   return (
     <div>
