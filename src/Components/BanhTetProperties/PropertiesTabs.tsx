@@ -1,6 +1,23 @@
 import { useState } from "react";
 
-export const TabsContent = () => {
+async function checkPot(date: string) {
+    const response = await fetch(`http://localhost:3000/sheets/${date}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+
+    if (!response.ok) {
+        console.error("Failed to fetch data");
+        return;
+    }
+
+    const data = await response.json();
+    return data;
+}
+
+export const TabsContent = ({ date }: { date: string }) => {
     const [propertiesForm, setPropertiesForm] = useState({
         banh_tet_man_nho: 0,
         banh_tet_man: 0,
@@ -152,7 +169,7 @@ const tabsData = [
                 <br />
                 <br />
             </div>,
-        content: <TabsContent />,
+        content: <TabsContent date = "15-01"/>,
         bg_color: "#e45814",
         order_note: "Giao ngày 16-19/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao."
     },
@@ -163,7 +180,7 @@ const tabsData = [
                 <br />
                 <br />
             </div>,
-        content: <TabsContent />,
+        content: <TabsContent date="18-01"/>,
         bg_color: "#f3963a",
         order_note: "Giao ngày 19-21/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao."
     },
@@ -173,7 +190,7 @@ const tabsData = [
                 Nấu ngày 22.01.2025
                 <div className="text-red-500">(23 Âm)</div>
             </div>,
-        content: <TabsContent />,
+        content: <TabsContent date = "22-01"/>,
         bg_color: "#ecba84",
         order_note: "LƯU Ý: Giao ngày 23-25 (24 âm - 26 âm), giao Grab/ Aha/ Loship/ Be trong ngày hoặc khách tự đặt giao."
     },
@@ -183,7 +200,7 @@ const tabsData = [
                 Nấu ngày 25.01.2025
                 <div className="text-red-500">(26 Âm)</div>
             </div>,
-        content: <TabsContent />,
+        content: <TabsContent date = "25-01"/>,
         bg_color: "#f2f5d4",
         order_note: "Giao ngày 23-25 (27 âm - 28 âm), khúc này để sốp tự chạy đi ship. Mua cúng ha dân Sài Gòn ơi!"
     },
