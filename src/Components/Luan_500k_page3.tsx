@@ -1,5 +1,5 @@
 // import React from "react";
-import Image from "../asset/placeholder_1.jpg";
+import Image from "../asset/QR.png";
 export const Luan_500k_page3 = () => {
   return (
     <div className="w-[100vw] h-[100vh] bg-[#0e540a] grid grid-cols-2">

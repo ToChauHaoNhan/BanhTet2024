@@ -3,10 +3,10 @@ import { Luan_500k_page1 } from "../Luan_500k_page1";
 import { AnimatePresence, motion } from "motion/react";
 
 let active_day = 0;
-const day = ["15-01", "18-01", "22-01", "25-01"];
+const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
 
 async function checkPot(date: string) {
-  const response = await fetch(`http://localhost:3000/sheets/${date}`, {
+  const response = await fetch(`https://banhtet2024backend.onrender.com/sheets/${date}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
