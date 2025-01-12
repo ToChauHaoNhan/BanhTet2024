@@ -30,32 +30,7 @@ async function checkPot(date: string) {
   }
 
   const data = await response.json();
-  if (data >= 20) {
-    toast.info('Huhu nồi đã đầy, xin lỗi bạn nhiều nhen', {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Bounce,
-      });
-  } else {
-    toast.success('🦄 Đã chốt đơn!', {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-      transition: Bounce,
-      });
-  }
-  return data;
+  return (data >= 20);
 }
 
 export const TabsContent = ({
@@ -86,7 +61,7 @@ export const TabsContent = ({
         />
         <button
           className="bg-[#0e540a] text-white p-4 px-16 rounded-r-3xl rounded-l-3xl m-8 transition hover:scale-105 shadow-2xl shadow-orange-950"
-          onClick={() => {
+          onClick={async () => {
             setFinalForm({
               ...finalForm,
               form_BK: {
@@ -94,8 +69,33 @@ export const TabsContent = ({
                 ngaychon: day[active_day],
               },
             });
-            setShow(!show);
-            checkPot(day[active_day]);
+            const data = await checkPot(day[active_day]);
+            if (data) {
+              toast.info('Huhu nồi đã đầy, xin lỗi bạn nhiều nhen', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+                });
+            } else {
+              toast.success('🦄 Đã chốt đơn!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+                });
+                setShow(!show);
+            }
           }}
         >
           Chốt đơn
