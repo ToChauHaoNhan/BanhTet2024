@@ -6,8 +6,8 @@ let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"];
 
 async function checkPot(date: string) {
-  const response = await fetch(`http://localhost:3000/sheets/${date}`, {
-    method: "GET",
+  const response = await fetch(`https://banhtet2024backend.onrender.com/sheets/${date}`, {
+  method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
