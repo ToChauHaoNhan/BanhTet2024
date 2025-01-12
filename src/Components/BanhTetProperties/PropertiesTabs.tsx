@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Luan_500k_page1 } from "../Luan_500k_page1";
 import { AnimatePresence, motion } from "motion/react";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 
 let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
@@ -12,14 +13,24 @@ async function checkPot(date: string) {
       "Content-Type": "application/json",
     },
   });
-
+  toast.info('🦄 Đang lấy thông tin ạ...', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+    });
   if (!response.ok) {
     console.error("Failed to fetch data");
     return;
   }
 
   const data = await response.json();
-  return data;
+  return (data >= 20);
 }
 
 export const TabsContent = ({
@@ -50,7 +61,7 @@ export const TabsContent = ({
         />
         <button
           className="bg-[#0e540a] text-white p-4 px-16 rounded-r-3xl rounded-l-3xl m-8 transition hover:scale-105 shadow-2xl shadow-orange-950"
-          onClick={() => {
+          onClick={async () => {
             setFinalForm({
               ...finalForm,
               form_BK: {
@@ -58,12 +69,33 @@ export const TabsContent = ({
                 ngaychon: day[active_day],
               },
             });
-            console.log({
-              ...propertiesForm,
-              ngaychon: day[active_day],
-            });
-            console.log(finalForm);
-            setShow(!show);
+            const data = await checkPot(day[active_day]);
+            if (data) {
+              toast.info('Huhu nồi đã đầy, xin lỗi bạn nhiều nhen', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+                });
+            } else {
+              toast.success('🦄 Đã chốt đơn!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+                });
+                setShow(!show);
+            }
           }}
         >
           Chốt đơn

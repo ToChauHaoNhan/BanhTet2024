@@ -10,7 +10,7 @@ export const Luan_500k_page2 = ({
   finalForm: object;
   setFinalForm: React.Dispatch<React.SetStateAction<object>>;
 }) => {
-  // console.log(finalForm)
+  console.log(finalForm)
   const [form_1, setForm_1] = React.useState({
     loaidonhang: "Sốp đặt ship cho khách",
     nguoinhan: "",
