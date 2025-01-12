@@ -4,7 +4,7 @@ import headerBackground from "../../asset/header-background.png";
 import lineImage from "../../asset/Underline-M.png";
 import lineImageSmall from "../../asset/Underline-S.png";
 
-export const TriNhan500k = () => {
+export const Landing = () => {
     return (
         <div className="flex w-[100vw] h-[100vh]">
             {/* Left Section */}

@@ -4,11 +4,11 @@ import { AnimatePresence, motion } from "motion/react";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 
 let active_day = 0;
-const day = ["15-01", "18-01", "22-01", "25-01"];
+const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
 
 async function checkPot(date: string) {
   const response = await fetch(`https://banhtet2024backend.onrender.com/sheets/${date}`, {
-  method: "GET",
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
