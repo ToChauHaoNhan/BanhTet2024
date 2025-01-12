@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../asset/placeholder.jpg";
+import Image from "../asset/order-popup.png";
 // import {ReactComponent as Lock} from "../asset/lock.svg"
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router";
@@ -18,7 +18,7 @@ export const Luan_500k_page1 = ({
   });
   const navigate = useNavigate();
   return (
-    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center ">
+    <div className="max-h-[100vh] max-w-[100vw] flex items-center justify-center z-50">
       <div className="bg-[#e45814] h-[80%] w-[80%] p-16 grid grid-cols-1 xl:grid-cols-2">
         <div className="flex items-center justify-center">
           <img className="max-h-[500px]" src={Image} />
@@ -40,7 +40,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Tên người đặt
                 <input
-                  className="bg-[#b4bea3] rounded-lg"
+                  className="bg-[#b4bea3] rounded-lg ml-5"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
@@ -69,10 +69,10 @@ export const Luan_500k_page1 = ({
               </label>
             </div>
             <div>
-              <label className="text-2xl flex gap-4">
+              <label className="text-2xl flex gap-4 ">
                 Điều chỉnh bánh
                 <textarea
-                  className="bg-[#b4bea3] w-[400px] h-[200px] resize-none"
+                  className="bg-[#b4bea3] w-[400px] h-[200px] resize-none ml-2"
                   placeholder="ABC"
                   onChange={(e) => {
                     setForm({
@@ -84,8 +84,8 @@ export const Luan_500k_page1 = ({
               </label>
             </div>
             <div className="flex justify-center">
-              <button className="bg-[#b4bea3] rounded-lg p-4 flex">
-                <LockClosedIcon className="size-6" />
+              <button className="bg-[#b4bea3] hover:opacity-80 rounded-lg p-4 flex justify-center items-center">
+                <LockClosedIcon className="size-8" />
                 OK Khóa đơn
               </button>
             </div>
