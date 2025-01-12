@@ -6,23 +6,23 @@ let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"];
 
 async function checkPot(date: string) {
-    const response = await fetch(`http://localhost:3000/sheets/${date}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
+  const response = await fetch(`http://localhost:3000/sheets/${date}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-    if (!response.ok) {
-        console.error("Failed to fetch data");
-        return;
-    }
+  if (!response.ok) {
+    console.error("Failed to fetch data");
+    return;
+  }
 
-    const data = await response.json();
-    return data;
+  const data = await response.json();
+  return data;
 }
 
-export const TabsContent = ({ date }: { date: string }{
+export const TabsContent = ({
   finalForm,
   setFinalForm,
   show,
