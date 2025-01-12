@@ -16,7 +16,7 @@ export const Luan_500k_page3 = () => {
           nha!
         </div>
         <br />
-        <a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className = "text-black text-xl bg-white rounded-full p-4 w-fit hover:opacity-80">Qua Facebook sốp</a>
+        <a href = "https://www.facebook.com/tothihaohanh3" target="_blank" className = "text-black text-xl bg-white rounded-full p-4 w-fit hover:opacity-80">Qua Facebook sốp</a>
       </div>
       <div className = "flex flex-col justify-center items-center">
         <img className="max-h-[500px]" src={Image} />
