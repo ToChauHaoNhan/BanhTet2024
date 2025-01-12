@@ -40,7 +40,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Tên người đặt
                 <input
-                  className="bg-[#b4bea3] rounded-lg"
+                  className="bg-[#b4bea3] rounded-lg ml-5"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
@@ -69,10 +69,10 @@ export const Luan_500k_page1 = ({
               </label>
             </div>
             <div>
-              <label className="text-2xl flex gap-4">
+              <label className="text-2xl flex gap-4 ">
                 Điều chỉnh bánh
                 <textarea
-                  className="bg-[#b4bea3] w-[400px] h-[200px] resize-none"
+                  className="bg-[#b4bea3] w-[400px] h-[200px] resize-none ml-2"
                   placeholder="ABC"
                   onChange={(e) => {
                     setForm({
@@ -84,8 +84,8 @@ export const Luan_500k_page1 = ({
               </label>
             </div>
             <div className="flex justify-center">
-              <button className="bg-[#b4bea3] rounded-lg p-4 flex">
-                <LockClosedIcon className="size-6" />
+              <button className="bg-[#b4bea3] hover:opacity-80 rounded-lg p-4 flex justify-center items-center">
+                <LockClosedIcon className="size-8" />
                 OK Khóa đơn
               </button>
             </div>
