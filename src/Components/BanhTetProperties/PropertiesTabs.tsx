@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Luan_500k_page1 } from "../Luan_500k_page1";
 import { AnimatePresence, motion } from "motion/react";
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import {ToastContainer, toast, Bounce } from 'react-toastify';
 
 let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
@@ -13,6 +13,17 @@ async function checkPot(date: string) {
       "Content-Type": "application/json",
     },
   });
+  if (!response.ok) {
+    console.error("Failed to fetch data");
+    return;
+  }
+
+  const data = await response.json();
+  console.log(data.data);
+  return (data.data >= 20);
+}
+
+const gettingDataToast = () => {
   toast.info('🦄 Đang lấy thông tin ạ...', {
     position: "top-center",
     autoClose: 5000,
@@ -24,13 +35,34 @@ async function checkPot(date: string) {
     theme: "colored",
     transition: Bounce,
     });
-  if (!response.ok) {
-    console.error("Failed to fetch data");
-    return;
-  }
+}
 
-  const data = await response.json();
-  return (data >= 20);
+const fullPotErrorToast = () => {
+  toast.error('Huhu nồi đã đầy, xin lỗi bạn nhiều nhen', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+    });
+}
+
+const acceptOrderToast = () => {
+  toast.success('🦄 Đã chốt đơn!', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    transition: Bounce,
+    });
 }
 
 export const TabsContent = ({
@@ -62,6 +94,7 @@ export const TabsContent = ({
         <button
           className="bg-[#0e540a] text-white p-4 px-16 rounded-r-3xl rounded-l-3xl m-8 transition hover:scale-105 shadow-2xl shadow-orange-950"
           onClick={async () => {
+            gettingDataToast();
             setFinalForm({
               ...finalForm,
               form_BK: {
@@ -70,30 +103,11 @@ export const TabsContent = ({
               },
             });
             const data = await checkPot(day[active_day]);
+            console.log("data: ", data);
             if (data) {
-              toast.info('Huhu nồi đã đầy, xin lỗi bạn nhiều nhen', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-                });
+              fullPotErrorToast();
             } else {
-              toast.success('🦄 Đã chốt đơn!', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-                });
+              acceptOrderToast();
                 setShow(!show);
             }
           }}
@@ -282,6 +296,7 @@ export const PropertiesTabs = ({
   active_day = activeTabIndex;
   return (
     <div className="w-[80vw] h-[80vh]">
+      <ToastContainer />
       <AnimatePresence>
         {show ? (
           <motion.div
