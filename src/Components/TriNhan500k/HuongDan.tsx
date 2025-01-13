@@ -8,7 +8,7 @@ export const HuongDan = () => {
             </h2>
 
             <p className="text-md font-light">
-                Web hàng có thông báo Bộ Công Thương nên không có tính năng trả tiền online đâu ạ.
+                Web hong có thông báo Bộ Cô Thương nên không có tính năng trả tiền online đâu ạ.
             </p>
         </div>
     );
