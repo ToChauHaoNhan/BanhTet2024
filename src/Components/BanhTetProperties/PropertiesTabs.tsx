@@ -292,7 +292,7 @@ export const PropertiesTabs = ({
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   active_day = activeTabIndex;
   return (
-    <div className="w-[80vw] h-[80vh]">
+    <div className="w-[80vw] h-auto mb-16 mt-8">
       <ToastContainer />
       <AnimatePresence>
         {show ? (
