@@ -6,7 +6,7 @@ import Egg from "../../asset/egg.png";
 
 export const NguyenLieu = () => {
     return (
-        <div className="bg-[#0e540a] flex flex-col w-full min-h-screen py-8 px-4 md:px-8 lg:px-20 md:overflow-hidden">
+        <div id="nguyen-lieu" className="bg-[#0e540a] flex flex-col w-full min-h-screen py-8 px-4 md:px-8 lg:px-20 md:overflow-hidden">
             <h2 className="text-white text-center text-2xl md:text-3xl lg:text-4xl font-bold mt-8 lg:mt-20 mb-10 lg:mb-20 px-4">
                 Nguyên liệu toàn hàng nóng, không mua sỉ, nên giá mắc chút mà ngon nhaaa
             </h2>
