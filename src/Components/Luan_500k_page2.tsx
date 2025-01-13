@@ -34,7 +34,7 @@ export const Luan_500k_page2 = ({
       </div>
       <div className="grid grid-cols-3 pt-8">
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="bg-[#e45814] w-[40vh] h-[50vh] flex flex-col items-center justify-center px-8">
+          <div className="bg-[#e45814] md:w-[50vh] xl:w-[40vh] h-[60vh] flex flex-col items-center justify-center px-8">
             <div className="text-white font-bold text-3xl text-center">
               SỐP ĐẶT SHIP CHO KHÁCH
             </div>
@@ -94,7 +94,7 @@ export const Luan_500k_page2 = ({
           </button>
         </div>
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="bg-[#e45814] w-[40vh] h-[60vh] flex flex-col items-center justify-center px-8">
+          <div className="bg-[#e45814] md:w-[50vh] xl:w-[40vh] h-[60vh] flex flex-col items-center justify-center px-8">
             <div className="text-white font-bold text-3xl text-center">
               SỐP ĐẶT SHIP THEO YÊU CẦU
             </div>
@@ -166,7 +166,7 @@ export const Luan_500k_page2 = ({
           </button>
         </div>
         <div className="flex flex-col items-center justify-center gap-4">
-          <div className="bg-[#e45814] w-[40vh] h-[50vh] flex flex-col items-center justify-center px-8">
+          <div className="bg-[#e45814] md:w-[50vh] xl:w-[40vh] md:h-[60vh] flex flex-col items-center justify-center px-8">
             <div className="text-white font-bold text-3xl text-center">
               KHÁCH TỰ LẤY BÁNH
             </div>
