@@ -1,10 +1,18 @@
 
+import { useRef } from "react";
 import header from "../../asset/header.png";
 import headerBackground from "../../asset/header-background.png";
 import lineImage from "../../asset/Underline-M.png";
 import lineImageSmall from "../../asset/Underline-S.png";
 
 export const Landing = () => {
+    const scrollToNguyenLieu = () => {
+        const target = document.getElementById("nguyen-lieu");
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div className="flex w-[100vw] h-[100vh]">
             {/* Left Section */}
@@ -22,7 +30,7 @@ export const Landing = () => {
                     <h1 className="text-7xl font-bold mb-4 ">GOM NỒI BÁNH TÉT</h1>
                     <img src={lineImage} alt="Decorative Line" className="mx-auto mb-20" />
                     <p className="mb-6 text-xl mb-10">Bán gần chục năm rồi mới có web</p>
-                    <button className="bg-[#FF6A00] text-white text-bold py-3 px-6 rounded-full text-lg">
+                    <button onClick={scrollToNguyenLieu} className="bg-[#FF6A00] text-white text-bold py-3 px-6 rounded-full text-lg">
                         Mua sớm đi, đắt hàng lắm á!
                     </button>
                 </div>
