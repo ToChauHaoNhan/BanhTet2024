@@ -42,7 +42,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Tên người đặt
                 <input
-                  className="bg-[#b4bea3] rounded-lg ml-8 w-[400px]"
+                  className="bg-[#b4bea3] rounded-lg ml-8 w-[250px]"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
@@ -58,7 +58,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Sốp liên hệ qua
                 <input
-                  className="bg-[#b4bea3] rounded-lg ml-4 w-[400px]"
+                  className="bg-[#b4bea3] rounded-lg ml-4 w-[250px]"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
@@ -74,7 +74,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4 ">
                 Điều chỉnh bánh
                 <textarea
-                  className="bg-[#b4bea3] w-[400px] h-[200px] resize-none ml-2"
+                  className="bg-[#b4bea3] w-[250px] h-[200px] resize-none ml-2"
                   placeholder="ABC"
                   onChange={(e) => {
                     setForm({
@@ -86,7 +86,7 @@ export const Luan_500k_page1 = ({
               </label>
             </div>
             <div className="flex justify-center">
-              <button className="bg-[#b4bea3] hover:opacity-80 rounded-lg p-4 flex justify-center items-center">
+              <button className="bg-[#b4bea3] hover:opacity-80 ml-[100px] rounded-lg p-4 flex justify-center items-center">
                 <LockClosedIcon className="size-8" />
                 OK Khóa đơn
               </button>
