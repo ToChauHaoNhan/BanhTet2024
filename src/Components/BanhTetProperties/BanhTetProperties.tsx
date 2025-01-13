@@ -9,7 +9,7 @@ export const BanhTetProperties = ({
 }) => {
   return (
     <div className="bg-[#0e540a] w-[100vw] h-[100vh] flex justify-center">
-      <div className="w-auto">
+      <div className="w-auto h-auto">
         <PropertiesTabs finalForm={finalForm} setFinalForm={setFinalForm} />
       </div>
     </div>

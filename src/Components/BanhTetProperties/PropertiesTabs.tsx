@@ -6,6 +6,55 @@ import {ToastContainer, toast, Bounce } from 'react-toastify';
 let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
 
+const tabsData = [
+  {
+    label: (
+      <div className="bg-[#e45814] p-4 rounded-t-full h-[100%]">
+        Nấu ngày 15.01
+      </div>
+    ),
+    // content: <TabsContent date = "15-01"/>,
+    bg_color: "#e45814",
+    order_note:
+      "Giao ngày 16-19/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
+  },
+  {
+    label: (
+      <div className="bg-[#f3963a] p-4 rounded-t-full h-[100%]">
+        Nấu ngày 18.01
+      </div>
+    ),
+    // content: <TabsContent date="18-01"/>,
+    bg_color: "#f3963a",
+    order_note:
+      "Giao ngày 19-21/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
+  },
+  {
+    label: (
+      <div className="bg-[#ecba84] p-4 rounded-t-full h-[100%]">
+        Nấu ngày 22.01
+        <div className="text-red-500">(23 Âm)</div>
+      </div>
+    ),
+    // content: <TabsContent date = "22-01"/>,
+    bg_color: "#ecba84",
+    order_note:
+      "LƯU Ý: Giao ngày 23-25 (24 âm - 26 âm), giao Grab/ Aha/ Loship/ Be trong ngày hoặc khách tự đặt giao.",
+  },
+  {
+    label: (
+      <div className="bg-[#f2f5d4] p-4 rounded-t-full h-[100%]">
+        Nấu ngày 25.01
+        <div className="text-red-500">(26 Âm)</div>
+      </div>
+    ),
+    // content: <TabsContent date = "25-01"/>,
+    bg_color: "#f2f5d4",
+    order_note:
+      "Giao ngày 23-25 (27 âm - 28 âm), khúc này để sốp tự chạy đi ship. Mua cúng ha dân Sài Gòn ơi!",
+  },
+];
+
 async function checkPot(date: string) {
   const response = await fetch(`https://banhtet2024backend.onrender.com/sheets/${date}`, {
     method: "GET",
@@ -85,10 +134,10 @@ export const TabsContent = ({
     banh_tet_chay: 0,
   });
   return (
-    <div className="flex lg:flex-wrap p-4">
-      <div className="w-1/2 justify-items-center justify-center content-center">
+    <div className="flex flex-wrap-reverse p-4 max-w-[100%]">
+      <div className="lg:w-1/2 justify-items-center content-center">
         <img
-          className="banhtet-image-properties w-[75%] h-[75%] rounded-lg"
+          className="banhtet-image-properties w-[75%] h-auto rounded-lg"
           src="src/asset/pot.png"
         />
         <button
@@ -115,7 +164,7 @@ export const TabsContent = ({
           Chốt đơn
         </button>
       </div>
-      <div className="w-1/2 p-4 items-center content-center">
+      <div className="lg:w-1/2 p-4 items-center content-center">
         <div className="py-1">
           <div className="text-2xl flex gap-4">
             Bánh tét mặn nhỏ (thịt mỡ đậu xanh)
@@ -232,58 +281,6 @@ export const TabsContent = ({
   );
 };
 
-const tabsData = [
-  {
-    label: (
-      <div className="bg-[#e45814] p-4 rounded-t-full">
-        Nấu ngày 15.01.2025
-        <br />
-        <br />
-      </div>
-    ),
-    // content: <TabsContent date = "15-01"/>,
-    bg_color: "#e45814",
-    order_note:
-      "Giao ngày 16-19/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
-  },
-  {
-    label: (
-      <div className="bg-[#f3963a] p-4 rounded-t-full">
-        Nấu ngày 18.01.2025
-        <br />
-        <br />
-      </div>
-    ),
-    // content: <TabsContent date="18-01"/>,
-    bg_color: "#f3963a",
-    order_note:
-      "Giao ngày 19-21/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
-  },
-  {
-    label: (
-      <div className="bg-[#ecba84] p-4 rounded-t-full">
-        Nấu ngày 22.01.2025
-        <div className="text-red-500">(23 Âm)</div>
-      </div>
-    ),
-    // content: <TabsContent date = "22-01"/>,
-    bg_color: "#ecba84",
-    order_note:
-      "LƯU Ý: Giao ngày 23-25 (24 âm - 26 âm), giao Grab/ Aha/ Loship/ Be trong ngày hoặc khách tự đặt giao.",
-  },
-  {
-    label: (
-      <div className="bg-[#f2f5d4] p-4 rounded-t-full">
-        Nấu ngày 25.01.2025
-        <div className="text-red-500">(26 Âm)</div>
-      </div>
-    ),
-    // content: <TabsContent date = "25-01"/>,
-    bg_color: "#f2f5d4",
-    order_note:
-      "Giao ngày 23-25 (27 âm - 28 âm), khúc này để sốp tự chạy đi ship. Mua cúng ha dân Sài Gòn ơi!",
-  },
-];
 export const PropertiesTabs = ({
   finalForm,
   setFinalForm,
