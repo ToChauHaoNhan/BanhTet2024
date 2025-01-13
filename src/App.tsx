@@ -15,7 +15,7 @@ import { FinalPage } from "./Page/FinalPage";
 function App() {
   const [finalForm, setFinalForm] = React.useState({})
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<FinalPage finalForm = {finalForm} setFinalForm = {setFinalForm}/>} />

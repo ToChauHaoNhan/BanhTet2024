@@ -304,7 +304,6 @@ export const PropertiesTabs = ({
             <Luan_500k_page1
               finalForm={finalForm}
               setFinalForm={setFinalForm}
-              setShow = {setShow}
             />
           </motion.div>
         ) : null}

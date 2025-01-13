@@ -42,7 +42,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Tên người đặt
                 <input
-                  className="bg-[#b4bea3] rounded-lg ml-5"
+                  className="bg-[#b4bea3] rounded-lg ml-8 w-[400px]"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
@@ -58,7 +58,7 @@ export const Luan_500k_page1 = ({
               <label className="text-2xl flex gap-4">
                 Sốp liên hệ qua
                 <input
-                  className="bg-[#b4bea3] rounded-lg"
+                  className="bg-[#b4bea3] rounded-lg ml-4 w-[400px]"
                   type="text"
                   placeholder="ABC"
                   onChange={(e) => {
