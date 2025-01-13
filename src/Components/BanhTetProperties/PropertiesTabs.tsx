@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Luan_500k_page1 } from "../Luan_500k_page1";
 import { AnimatePresence, motion } from "motion/react";
 import {ToastContainer, toast, Bounce } from 'react-toastify';
+import Pot from "../../asset/pot.png"
 
 let active_day = 0;
 const day = ["15-01", "18-01", "22-01", "25-01"]; //day[active_day]
@@ -138,7 +139,7 @@ export const TabsContent = ({
       <div className="lg:w-1/2 justify-items-center content-center">
         <img
           className="banhtet-image-properties w-[75%] h-auto rounded-lg"
-          src="src/asset/pot.png"
+          src={Pot}
         />
         <button
           className="bg-[#0e540a] text-white p-4 px-16 rounded-r-3xl rounded-l-3xl m-8 transition hover:scale-105 shadow-2xl shadow-orange-950"
