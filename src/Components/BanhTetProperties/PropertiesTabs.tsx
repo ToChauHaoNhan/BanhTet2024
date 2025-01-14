@@ -208,7 +208,7 @@ export const TabsContent = ({
         </div>
         <div className="py-1">
           <div className="text-2xl flex gap-4">
-            Bánh tét mặn đặc biệt (thịt mỡ lạp xưởng đậu xanh 5 trứng muối)
+            Bánh tét mặn đặc biệt (thịt mỡ đậu xanh 5 trứng muối)
           </div>
           <div className="text-lg text-slate-700 flex gap-4">
             150.000 VNĐ - Khoảng 1.2 kg
