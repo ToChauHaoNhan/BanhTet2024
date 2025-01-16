@@ -23,6 +23,7 @@ const tabsData = [
     label: (
       <div className="bg-[#f3963a] p-4 rounded-t-full h-[100%]">
         Nấu ngày 21.01
+        <div className="text-red-500">(22 Âm)</div>
       </div>
     ),
     // content: <TabsContent date="18-01"/>,
