@@ -22,13 +22,13 @@ const tabsData = [
   {
     label: (
       <div className="bg-[#f3963a] p-4 rounded-t-full h-[100%]">
-        Nấu ngày 18.01
+        Nấu ngày 21.01
       </div>
     ),
     // content: <TabsContent date="18-01"/>,
     bg_color: "#f3963a",
     order_note:
-      "Giao ngày 19-21/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
+      "Giao ngày 22-23/01/2025, giao Grab/ Aha/ Loship/ Be trong ngày, phí ship từ 20k hoặc khách tự đặt giao.",
   },
   {
     label: (
